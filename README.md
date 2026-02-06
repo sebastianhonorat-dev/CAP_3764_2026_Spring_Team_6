@@ -109,7 +109,7 @@ Future integration will support analysis of:
 ├── requirements.txt
 ├── .env
 └── README.md
-```text
+```
 
 ---
 

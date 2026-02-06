@@ -1,0 +1,347 @@
+,code,title,unit_id,distance,school.type,school.main_campus,credential.level,earnings.4_yr.overall_median_earnings,earnings.4_yr.working_not_enrolled.overall_count,debt.staff_grad_plus.all.eval_inst.median,debt.staff_grad_plus.all.eval_inst.median_payment,school.name
+0,5108,Allied Health and Medical Assisting Services.,417327,1,"Private, nonprofit",1,2,34153.0,30.0,25029.0,265,City College-Altamonte Springs
+1,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",417327,1,"Private, nonprofit",1,2,40938.0,22.0,24535.0,260,City College-Altamonte Springs
+2,1402,"Aerospace, Aeronautical and Astronautical Engineering.",426314,3,"Private, nonprofit",0,3,86529.0,202.0,26312.0,279,Embry-Riddle Aeronautical University-Worldwide
+3,1427,Systems Engineering.,426314,3,"Private, nonprofit",0,5,148622.0,16.0,34021.0,387,Embry-Riddle Aeronautical University-Worldwide
+4,4303,Homeland Security.,426314,3,"Private, nonprofit",0,3,64823.0,45.0,20500.0,217,Embry-Riddle Aeronautical University-Worldwide
+5,4706,Vehicle Maintenance and Repair Technologies.,426314,3,"Private, nonprofit",0,2,76825.0,60.0,15375.0,163,Embry-Riddle Aeronautical University-Worldwide
+6,4706,Vehicle Maintenance and Repair Technologies.,426314,3,"Private, nonprofit",0,3,85596.0,91.0,22662.0,240,Embry-Riddle Aeronautical University-Worldwide
+7,4901,Air Transportation.,426314,3,"Private, nonprofit",0,2,66388.0,53.0,18750.0,199,Embry-Riddle Aeronautical University-Worldwide
+8,4901,Air Transportation.,426314,3,"Private, nonprofit",0,3,72710.0,629.0,23250.0,246,Embry-Riddle Aeronautical University-Worldwide
+9,4901,Air Transportation.,426314,3,"Private, nonprofit",0,5,92094.0,218.0,37674.0,429,Embry-Riddle Aeronautical University-Worldwide
+10,5202,"Business Administration, Management and Operations.",426314,3,"Private, nonprofit",0,2,63527.0,26.0,22925.0,243,Embry-Riddle Aeronautical University-Worldwide
+11,5202,"Business Administration, Management and Operations.",426314,3,"Private, nonprofit",0,3,77767.0,197.0,22405.0,238,Embry-Riddle Aeronautical University-Worldwide
+12,5202,"Business Administration, Management and Operations.",426314,3,"Private, nonprofit",0,5,97901.0,169.0,36711.0,418,Embry-Riddle Aeronautical University-Worldwide
+13,5108,Allied Health and Medical Assisting Services.,428170,1,"Private, for-profit",1,1,23265.0,131.0,9500.0,101,Southeastern College-West Palm Beach
+14,5108,Allied Health and Medical Assisting Services.,428170,1,"Private, for-profit",1,2,27942.0,97.0,17719.0,188,Southeastern College-West Palm Beach
+15,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",428170,1,"Private, for-profit",1,2,42079.0,123.0,26250.0,278,Southeastern College-West Palm Beach
+16,5135,Somatic Bodywork and Related Therapeutic Services.,428170,1,"Private, for-profit",1,1,18998.0,25.0,9500.0,101,Southeastern College-West Palm Beach
+17,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",428170,1,"Private, for-profit",1,2,70367.0,69.0,23535.0,250,Southeastern College-West Palm Beach
+18,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",428170,1,"Private, for-profit",1,1,43149.0,75.0,14440.0,153,Southeastern College-West Palm Beach
+19,5135,Somatic Bodywork and Related Therapeutic Services.,430582,1,"Private, for-profit",1,1,20721.0,108.0,8905.0,94,Praxis Institute
+20,0301,Natural Resources Conservation and Research.,433660,1,Public,1,3,34866.0,37.0,18500.0,196,Florida Gulf Coast University
+21,0901,Communication and Media Studies.,433660,1,Public,1,3,45772.0,200.0,17479.0,185,Florida Gulf Coast University
+22,0907,"Radio, Television, and Digital Communication.",433660,1,Public,1,3,43424.0,19.0,19500.0,207,Florida Gulf Coast University
+23,1301,"Education, General.",433660,1,Public,1,3,39245.0,28.0,18828.0,200,Florida Gulf Coast University
+24,1310,Special Education and Teaching.,433660,1,Public,1,3,49745.0,25.0,24249.0,257,Florida Gulf Coast University
+25,1311,Student Counseling and Personnel Services.,433660,1,Public,1,5,56597.0,25.0,39622.0,451,Florida Gulf Coast University
+26,1312,"Teacher Education and Professional Development, Specific Levels and Methods.",433660,1,Public,1,3,46960.0,126.0,17989.0,191,Florida Gulf Coast University
+27,1405,Biomedical/Medical Engineering.,433660,1,Public,1,3,71611.0,25.0,17779.0,188,Florida Gulf Coast University
+28,1408,Civil Engineering.,433660,1,Public,1,3,71324.0,60.0,17125.0,182,Florida Gulf Coast University
+29,1409,Computer Engineering.,433660,1,Public,1,3,96155.0,29.0,21500.0,228,Florida Gulf Coast University
+30,2203,Legal Support Services.,433660,2,Public,1,3,44645.0,59.0,20000.0,212,Florida Gulf Coast University
+31,2301,"English Language and Literature, General.",433660,1,Public,1,3,40276.0,40.0,16658.0,177,Florida Gulf Coast University
+32,2601,"Biology, General.",433660,1,Public,1,3,37681.0,82.0,21814.0,231,Florida Gulf Coast University
+33,3105,Health and Physical Education/Fitness.,433660,1,Public,1,3,48144.0,21.0,15000.0,159,Florida Gulf Coast University
+34,4201,"Psychology, General.",433660,1,Public,1,3,43031.0,135.0,17245.0,183,Florida Gulf Coast University
+35,4301,Criminal Justice and Corrections.,433660,2,Public,1,3,46485.0,127.0,20000.0,212,Florida Gulf Coast University
+36,4304,Security Science and Technology.,433660,1,Public,1,3,39879.0,49.0,19099.0,202,Florida Gulf Coast University
+37,4407,Social Work.,433660,1,Public,1,3,43345.0,38.0,17500.0,186,Florida Gulf Coast University
+38,4407,Social Work.,433660,1,Public,1,5,50008.0,26.0,25500.0,290,Florida Gulf Coast University
+39,4510,Political Science and Government.,433660,1,Public,1,3,58501.0,37.0,19500.0,207,Florida Gulf Coast University
+40,5007,Fine and Studio Arts.,433660,1,Public,1,3,36509.0,33.0,20650.0,219,Florida Gulf Coast University
+41,5100,"Health Services/Allied Health/Health Sciences, General.",433660,1,Public,1,3,49057.0,54.0,17515.0,186,Florida Gulf Coast University
+42,5122,Public Health.,433660,1,Public,1,3,42676.0,39.0,17500.0,186,Florida Gulf Coast University
+43,5123,Rehabilitation and Therapeutic Professions.,433660,0,Public,1,6,71086.0,33.0,61500.0,700,Florida Gulf Coast University
+44,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",433660,1,Public,1,3,71282.0,61.0,17625.0,187,Florida Gulf Coast University
+45,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",433660,1,Public,1,5,132071.0,33.0,94418.0,1074,Florida Gulf Coast University
+46,5202,"Business Administration, Management and Operations.",433660,1,Public,1,3,54503.0,150.0,18976.0,201,Florida Gulf Coast University
+47,5203,Accounting and Related Services.,433660,1,Public,1,3,60650.0,55.0,15000.0,159,Florida Gulf Coast University
+48,5208,Finance and Financial Management Services.,433660,1,Public,1,3,70927.0,47.0,19267.0,204,Florida Gulf Coast University
+49,5209,Hospitality Administration/Management.,433660,1,Public,1,3,44941.0,170.0,19500.0,207,Florida Gulf Coast University
+50,5212,Management Information Systems and Services.,433660,1,Public,1,3,51265.0,40.0,19611.0,208,Florida Gulf Coast University
+51,5214,Marketing.,433660,1,Public,1,3,53802.0,97.0,18315.0,194,Florida Gulf Coast University
+52,5401,History.,433660,1,Public,1,3,32568.0,24.0,21375.0,227,Florida Gulf Coast University
+53,5133,Alternative and Complementary Medicine and Medical Systems.,434441,1,"Private, for-profit",1,5,41044.0,26.0,61500.0,700,Florida College of Integrative Medicine
+54,5108,Allied Health and Medical Assisting Services.,434469,2,"Private, for-profit",1,1,28291.0,35.0,9020.0,96,New Professions Technical Institute
+55,1204,Cosmetology and Related Personal Grooming Services.,438285,1,"Private, for-profit",0,1,24132.0,152.0,6333.0,67,Cortiva Institute
+56,5135,Somatic Bodywork and Related Therapeutic Services.,438285,1,"Private, for-profit",0,1,22165.0,261.0,7892.0,84,Cortiva Institute
+57,5133,Alternative and Complementary Medicine and Medical Systems.,439446,1,"Private, nonprofit",1,5,29614.0,25.0,61500.0,700,Atlantic Institute of Oriental Medicine
+58,1204,Cosmetology and Related Personal Grooming Services.,439774,1,"Private, for-profit",1,1,12823.0,61.0,5500.0,58,New Concept Massage and Beauty School
+59,5106,Dental Support Services and Allied Professions.,439792,1,"Private, for-profit",1,1,24581.0,68.0,13000.0,138,Fortis College-Orange Park
+60,5107,Health and Medical Administrative Services.,439792,1,"Private, for-profit",1,1,27539.0,36.0,13000.0,138,Fortis College-Orange Park
+61,5108,Allied Health and Medical Assisting Services.,439792,1,"Private, for-profit",1,1,26220.0,127.0,9500.0,101,Fortis College-Orange Park
+62,5110,Clinical/Medical Laboratory Science/Research and Allied Professions.,439792,1,"Private, for-profit",1,1,26357.0,21.0,9500.0,101,Fortis College-Orange Park
+63,5133,Alternative and Complementary Medicine and Medical Systems.,439969,1,"Private, for-profit",1,5,32441.0,40.0,41000.0,466,Acupuncture and Massage College
+64,5135,Somatic Bodywork and Related Therapeutic Services.,439969,1,"Private, for-profit",1,1,17864.0,34.0,7600.0,81,Acupuncture and Massage College
+65,4400,"Human Services, General.",441371,3,"Private, nonprofit",1,2,27159.0,30.0,17978.0,191,Ultimate Medical Academy
+66,5106,Dental Support Services and Allied Professions.,441371,2,"Private, nonprofit",1,1,25786.0,155.0,8998.0,95,Ultimate Medical Academy
+67,5107,Health and Medical Administrative Services.,441371,2,"Private, nonprofit",1,1,22845.0,6804.0,11828.0,125,Ultimate Medical Academy
+68,5107,Health and Medical Administrative Services.,441371,2,"Private, nonprofit",1,2,25535.0,3593.0,18072.0,192,Ultimate Medical Academy
+69,5108,Allied Health and Medical Assisting Services.,441371,3,"Private, nonprofit",1,2,27111.0,138.0,15244.0,162,Ultimate Medical Academy
+70,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",441371,2,"Private, nonprofit",1,1,22556.0,244.0,9500.0,101,Ultimate Medical Academy
+71,1204,Cosmetology and Related Personal Grooming Services.,441380,1,"Private, for-profit",1,1,17317.0,128.0,13000.0,138,Florida Barber Academy
+72,5107,Health and Medical Administrative Services.,441423,1,"Private, for-profit",1,1,25381.0,37.0,9500.0,101,Florida Education Institute
+73,5108,Allied Health and Medical Assisting Services.,441423,1,"Private, for-profit",1,1,22286.0,263.0,9500.0,101,Florida Education Institute
+74,2201,Law.,442295,1,"Private, nonprofit",1,7,69213.0,116.0,144259.0,1641,Ave Maria School of Law
+75,4805,Precision Metal Working.,442329,1,"Private, for-profit",0,1,39102.0,2647.0,9500.0,101,Tulsa Welding School-Jacksonville
+76,1204,Cosmetology and Related Personal Grooming Services.,443234,1,"Private, for-profit",1,1,18333.0,61.0,6786.0,72,Hollywood Institute
+77,5108,Allied Health and Medical Assisting Services.,443234,1,"Private, for-profit",1,1,25261.0,41.0,7233.0,77,Hollywood Institute
+78,5135,Somatic Bodywork and Related Therapeutic Services.,443234,1,"Private, for-profit",1,1,14480.0,38.0,6590.0,70,Hollywood Institute
+79,1199,"Computer and Information Sciences and Support Services, Other.",443252,1,"Private, for-profit",1,1,21678.0,97.0,9500.0,101,South Florida Institute of Technology
+80,1505,Environmental Control Technologies/Technicians.,443252,1,"Private, for-profit",1,1,35944.0,561.0,8702.0,92,South Florida Institute of Technology
+81,4605,Plumbing and Related Water Supply Services.,443252,1,"Private, for-profit",1,1,31959.0,51.0,9500.0,101,South Florida Institute of Technology
+82,4701,Electrical/Electronics Maintenance and Repair Technology.,443252,1,"Private, for-profit",1,1,38351.0,349.0,9374.0,99,South Florida Institute of Technology
+83,5108,Allied Health and Medical Assisting Services.,443252,1,"Private, for-profit",1,1,19274.0,123.0,5679.0,60,South Florida Institute of Technology
+84,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",443252,1,"Private, for-profit",1,1,15273.0,70.0,9500.0,101,South Florida Institute of Technology
+85,4706,Vehicle Maintenance and Repair Technologies.,444370,1,"Private, for-profit",1,1,28612.0,87.0,6519.0,69,American Advanced Technicians Institute
+86,1204,Cosmetology and Related Personal Grooming Services.,445212,1,"Private, for-profit",0,1,22368.0,840.0,7232.0,77,Paul Mitchell the School-Orlando
+87,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",445744,1,"Private, for-profit",0,1,38389.0,149.0,13000.0,138,Fortis Institute-Port Saint Lucie
+88,5106,Dental Support Services and Allied Professions.,445744,1,"Private, for-profit",0,1,29637.0,55.0,12293.0,130,Fortis Institute-Port Saint Lucie
+89,5108,Allied Health and Medical Assisting Services.,445744,1,"Private, for-profit",0,1,28041.0,443.0,9500.0,101,Fortis Institute-Port Saint Lucie
+90,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",445744,1,"Private, for-profit",0,2,62980.0,116.0,26833.0,284,Fortis Institute-Port Saint Lucie
+91,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",445744,1,"Private, for-profit",0,1,46352.0,104.0,17667.0,187,Fortis Institute-Port Saint Lucie
+92,3906,Theological and Ministerial Studies.,446048,1,"Private, nonprofit",1,3,35371.0,18.0,20000.0,212,Ave Maria University
+93,4201,"Psychology, General.",446048,1,"Private, nonprofit",1,3,38617.0,21.0,18775.0,199,Ave Maria University
+94,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",446109,1,"Private, for-profit",1,1,42525.0,103.0,14656.0,155,Cambridge College of Healthcare & Technology
+95,5106,Dental Support Services and Allied Professions.,446127,1,"Private, for-profit",0,1,25853.0,174.0,12667.0,134,ATA Career Education
+96,5107,Health and Medical Administrative Services.,446127,3,"Private, for-profit",0,1,25497.0,60.0,17083.0,181,ATA Career Education
+97,5107,Health and Medical Administrative Services.,446127,3,"Private, for-profit",0,2,32505.0,59.0,24000.0,254,ATA Career Education
+98,5108,Allied Health and Medical Assisting Services.,446127,1,"Private, for-profit",0,1,29977.0,21.0,13583.0,144,ATA Career Education
+99,5108,Allied Health and Medical Assisting Services.,446127,1,"Private, for-profit",0,2,29047.0,128.0,21000.0,223,ATA Career Education
+100,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",446127,1,"Private, for-profit",0,2,36580.0,52.0,23375.0,248,ATA Career Education
+101,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",446127,1,"Private, for-profit",0,2,61187.0,48.0,23500.0,249,ATA Career Education
+102,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",446127,1,"Private, for-profit",0,1,50873.0,60.0,22917.0,243,ATA Career Education
+103,1410,"Electrical, Electronics and Communications Engineering.",446552,1,"Private, for-profit",1,2,26063.0,27.0,20000.0,212,Southern Technical College
+104,1204,Cosmetology and Related Personal Grooming Services.,447014,1,"Private, for-profit",1,1,25239.0,35.0,7253.0,77,Daytona College
+105,5107,Health and Medical Administrative Services.,447014,3,"Private, for-profit",1,1,29506.0,66.0,6636.0,70,Daytona College
+106,5108,Allied Health and Medical Assisting Services.,447014,2,"Private, for-profit",1,1,23591.0,84.0,6831.0,72,Daytona College
+107,5135,Somatic Bodywork and Related Therapeutic Services.,447014,1,"Private, for-profit",1,1,17719.0,22.0,6476.0,69,Daytona College
+108,1204,Cosmetology and Related Personal Grooming Services.,447883,1,"Private, for-profit",1,1,20263.0,145.0,7600.0,81,American Institute of Beauty
+109,1204,Cosmetology and Related Personal Grooming Services.,447892,1,"Private, for-profit",1,1,16103.0,64.0,6334.0,67,North Florida Cosmetology Institute
+110,1204,Cosmetology and Related Personal Grooming Services.,447908,1,"Private, for-profit",1,1,12625.0,22.0,4903.0,52,Florida Academy of Health & Beauty
+111,1101,"Computer and Information Sciences, General.",449038,3,"Private, for-profit",0,3,77481.0,138.0,37500.0,398,Strayer University-Florida
+112,1104,Information Science/Studies.,449038,3,"Private, for-profit",0,3,78793.0,324.0,40250.0,427,Strayer University-Florida
+113,1104,Information Science/Studies.,449038,3,"Private, for-profit",0,5,87889.0,209.0,74156.0,844,Strayer University-Florida
+114,1110,Computer/Information Technology Administration and Management.,449038,3,"Private, for-profit",0,2,57214.0,16.0,28519.0,302,Strayer University-Florida
+115,1304,Educational Administration and Supervision.,449038,3,"Private, for-profit",0,5,45764.0,209.0,81000.0,921,Strayer University-Florida
+116,4301,Criminal Justice and Corrections.,449038,3,"Private, for-profit",0,3,50636.0,355.0,41562.0,441,Strayer University-Florida
+117,4404,Public Administration.,449038,3,"Private, for-profit",0,5,55281.0,173.0,81723.0,930,Strayer University-Florida
+118,5107,Health and Medical Administrative Services.,449038,3,"Private, for-profit",0,5,48777.0,224.0,81207.0,924,Strayer University-Florida
+119,5201,"Business/Commerce, General.",449038,3,"Private, for-profit",0,2,47516.0,49.0,32140.0,341,Strayer University-Florida
+120,5201,"Business/Commerce, General.",449038,3,"Private, for-profit",0,3,59763.0,806.0,43122.0,457,Strayer University-Florida
+121,5202,"Business Administration, Management and Operations.",449038,3,"Private, for-profit",0,5,65830.0,2290.0,75005.0,853,Strayer University-Florida
+122,5203,Accounting and Related Services.,449038,3,"Private, for-profit",0,3,56398.0,250.0,41625.0,441,Strayer University-Florida
+123,5203,Accounting and Related Services.,449038,3,"Private, for-profit",0,5,60268.0,236.0,80164.0,912,Strayer University-Florida
+124,5210,Human Resources Management and Services.,449038,3,"Private, for-profit",0,5,55030.0,324.0,80998.0,921,Strayer University-Florida
+125,1109,Computer Systems Networking and Telecommunications.,449083,1,"Private, for-profit",1,2,43610.0,35.0,25900.0,275,CBT Technology Institute-Main Campus
+126,1505,Environmental Control Technologies/Technicians.,449083,1,"Private, for-profit",1,1,34717.0,412.0,8600.0,91,CBT Technology Institute-Main Campus
+127,1505,Environmental Control Technologies/Technicians.,449083,1,"Private, for-profit",1,2,41640.0,45.0,20151.0,214,CBT Technology Institute-Main Campus
+128,4701,Electrical/Electronics Maintenance and Repair Technology.,449083,1,"Private, for-profit",1,1,42430.0,206.0,8600.0,91,CBT Technology Institute-Main Campus
+129,4701,Electrical/Electronics Maintenance and Repair Technology.,449083,1,"Private, for-profit",1,2,39827.0,51.0,18210.0,193,CBT Technology Institute-Main Campus
+130,5107,Health and Medical Administrative Services.,449083,0,"Private, for-profit",1,1,24956.0,60.0,9498.0,101,CBT Technology Institute-Main Campus
+131,1505,Environmental Control Technologies/Technicians.,449092,1,"Private, for-profit",0,2,41640.0,45.0,20151.0,214,CBT Technology Institute-Hialeah
+132,4701,Electrical/Electronics Maintenance and Repair Technology.,449092,1,"Private, for-profit",0,2,39827.0,51.0,18210.0,193,CBT Technology Institute-Hialeah
+133,1204,Cosmetology and Related Personal Grooming Services.,449490,1,"Private, for-profit",1,1,17285.0,121.0,6549.0,69,Palm Beach Academy of Health & Beauty
+134,5135,Somatic Bodywork and Related Therapeutic Services.,449490,1,"Private, for-profit",1,1,21309.0,65.0,6333.0,67,Palm Beach Academy of Health & Beauty
+135,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",449506,1,"Private, nonprofit",1,2,41231.0,287.0,20000.0,212,SABER College
+136,5108,Allied Health and Medical Assisting Services.,449524,1,"Private, for-profit",1,2,50875.0,27.0,25250.0,268,Taylor College
+137,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",449524,1,"Private, for-profit",1,2,61899.0,82.0,31437.0,333,Taylor College
+138,5108,Allied Health and Medical Assisting Services.,449533,1,"Private, for-profit",1,1,25872.0,50.0,5945.0,63,Pensacola School of Massage Therapy & Health Careers
+139,5135,Somatic Bodywork and Related Therapeutic Services.,449533,1,"Private, for-profit",1,1,25772.0,51.0,5789.0,61,Pensacola School of Massage Therapy & Health Careers
+140,1104,Information Science/Studies.,449898,1,"Private, for-profit",0,3,60708.0,148.0,45268.0,480,South University-Tampa
+141,1104,Information Science/Studies.,449898,1,"Private, for-profit",0,5,88546.0,29.0,43847.0,499,South University-Tampa
+142,4201,"Psychology, General.",449898,1,"Private, for-profit",0,3,36910.0,151.0,44548.0,472,South University-Tampa
+143,4301,Criminal Justice and Corrections.,449898,1,"Private, for-profit",0,3,42478.0,175.0,42354.0,449,South University-Tampa
+144,4301,Criminal Justice and Corrections.,449898,1,"Private, for-profit",0,5,37597.0,82.0,41000.0,466,South University-Tampa
+145,5107,Health and Medical Administrative Services.,449898,1,"Private, for-profit",0,3,40160.0,247.0,39675.0,421,South University-Tampa
+146,5107,Health and Medical Administrative Services.,449898,1,"Private, for-profit",0,5,54350.0,190.0,41000.0,466,South University-Tampa
+147,5108,Allied Health and Medical Assisting Services.,449898,1,"Private, for-profit",0,2,43365.0,535.0,23000.0,244,South University-Tampa
+148,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",449898,1,"Private, for-profit",0,5,113965.0,175.0,139314.0,1585,South University-Tampa
+149,5132,Bioethics/Medical Ethics.,449898,1,"Private, for-profit",0,5,95177.0,72.0,58651.0,667,South University-Tampa
+150,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",449898,1,"Private, for-profit",0,3,78626.0,1607.0,23592.0,250,South University-Tampa
+151,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",449898,1,"Private, for-profit",0,5,106747.0,1269.0,59405.0,676,South University-Tampa
+152,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",449898,1,"Private, for-profit",0,8,108725.0,132.0,46988.0,534,South University-Tampa
+153,5202,"Business Administration, Management and Operations.",449898,1,"Private, for-profit",0,3,48439.0,358.0,46000.0,488,South University-Tampa
+154,5202,"Business Administration, Management and Operations.",449898,1,"Private, for-profit",0,5,55109.0,286.0,46193.0,525,South University-Tampa
+155,1204,Cosmetology and Related Personal Grooming Services.,449959,1,"Private, for-profit",0,1,22368.0,840.0,7232.0,77,Paul Mitchell the School-Tampa
+156,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",451103,1,"Private, for-profit",1,2,67447.0,183.0,21909.0,232,Miami Regional University
+157,1204,Cosmetology and Related Personal Grooming Services.,451121,1,"Private, for-profit",1,1,21120.0,76.0,9000.0,95,Paul Mitchell the School-Miami
+158,1204,Cosmetology and Related Personal Grooming Services.,451149,1,"Private, for-profit",1,1,22309.0,273.0,7364.0,78,Aveda Institute-South Florida
+159,1204,Cosmetology and Related Personal Grooming Services.,451158,1,"Private, for-profit",1,1,24165.0,354.0,7455.0,79,Aveda Institute-Tallahassee
+160,5135,Somatic Bodywork and Related Therapeutic Services.,451158,1,"Private, for-profit",1,1,21791.0,89.0,9500.0,101,Aveda Institute-Tallahassee
+161,1204,Cosmetology and Related Personal Grooming Services.,451167,1,"Private, for-profit",1,1,15089.0,123.0,9000.0,95,Shear Excellence Hair Academy
+162,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",454865,1,"Private, for-profit",1,2,49384.0,58.0,31500.0,334,Cambridge College of Healthcare & Technology
+163,1204,Cosmetology and Related Personal Grooming Services.,454917,1,"Private, for-profit",1,1,15488.0,135.0,6333.0,67,Celebrity School of Beauty
+164,1204,Cosmetology and Related Personal Grooming Services.,455479,1,"Private, for-profit",0,1,21848.0,75.0,10800.0,114,Fortis Institute-Pensacola
+165,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",455479,1,"Private, for-profit",0,1,32552.0,106.0,13000.0,138,Fortis Institute-Pensacola
+166,5106,Dental Support Services and Allied Professions.,455479,1,"Private, for-profit",0,1,24767.0,162.0,11316.0,120,Fortis Institute-Pensacola
+167,5107,Health and Medical Administrative Services.,455479,1,"Private, for-profit",0,1,22146.0,123.0,9500.0,101,Fortis Institute-Pensacola
+168,5108,Allied Health and Medical Assisting Services.,455479,1,"Private, for-profit",0,1,22618.0,417.0,9474.0,100,Fortis Institute-Pensacola
+169,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",455479,1,"Private, for-profit",0,2,60331.0,156.0,27910.0,296,Fortis Institute-Pensacola
+170,5108,Allied Health and Medical Assisting Services.,455831,1,"Private, for-profit",1,1,23874.0,100.0,7779.0,82,Medical Institute of Palm Beach
+171,1109,Computer Systems Networking and Telecommunications.,456977,1,"Private, for-profit",0,2,43610.0,35.0,25900.0,275,CBT Technology Institute-Cutler Bay
+172,5107,Health and Medical Administrative Services.,456977,3,"Private, for-profit",0,1,24956.0,60.0,9498.0,101,CBT Technology Institute-Cutler Bay
+173,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",457129,1,"Private, for-profit",0,3,81995.0,5380.0,22213.0,235,Chamberlain University-Florida
+174,1204,Cosmetology and Related Personal Grooming Services.,457396,1,"Private, for-profit",1,1,19369.0,48.0,6333.0,67,American Academy of Cosmetology
+175,4706,Vehicle Maintenance and Repair Technologies.,457411,1,"Private, for-profit",1,1,47056.0,197.0,29334.0,311,Aviation Institute of Maintenance-Orlando
+176,1204,Cosmetology and Related Personal Grooming Services.,457420,1,"Private, for-profit",1,1,23139.0,102.0,7389.0,78,Summit Salon Academy
+177,1204,Cosmetology and Related Personal Grooming Services.,457439,1,"Private, for-profit",1,1,23291.0,62.0,13000.0,138,Summit Salon Academy-Gainesville
+178,1204,Cosmetology and Related Personal Grooming Services.,457448,1,"Private, for-profit",1,1,18495.0,99.0,11020.0,117,Tenaj Salon Institute
+179,1204,Cosmetology and Related Personal Grooming Services.,459055,1,"Private, for-profit",0,1,19898.0,1061.0,13000.0,138,Empire Beauty School-West Palm
+180,5106,Dental Support Services and Allied Professions.,460190,1,"Private, for-profit",0,1,26765.0,254.0,9500.0,101,Concorde Career Institute-Orlando
+181,5107,Health and Medical Administrative Services.,460190,1,"Private, for-profit",0,1,29667.0,41.0,9500.0,101,Concorde Career Institute-Orlando
+182,5108,Allied Health and Medical Assisting Services.,460190,1,"Private, for-profit",0,1,26428.0,216.0,9500.0,101,Concorde Career Institute-Orlando
+183,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",460190,1,"Private, for-profit",0,1,40294.0,73.0,15335.0,163,Concorde Career Institute-Orlando
+184,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",460190,1,"Private, for-profit",0,2,53958.0,58.0,20000.0,212,Concorde Career Institute-Orlando
+185,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",460190,1,"Private, for-profit",0,2,53822.0,141.0,23938.0,254,Concorde Career Institute-Orlando
+186,1204,Cosmetology and Related Personal Grooming Services.,460701,1,"Private, for-profit",0,1,18974.0,168.0,6333.0,67,Artistic Nails and Beauty Academy-Lakeland
+187,1204,Cosmetology and Related Personal Grooming Services.,460969,1,"Private, for-profit",1,1,13823.0,196.0,7316.0,78,Beauty Academy of South Florida
+188,1204,Cosmetology and Related Personal Grooming Services.,462035,1,"Private, for-profit",1,1,26868.0,93.0,6333.0,67,Florida Academy
+189,5123,Rehabilitation and Therapeutic Professions.,462035,1,"Private, for-profit",1,1,36667.0,20.0,6333.0,67,Florida Academy
+190,1204,Cosmetology and Related Personal Grooming Services.,475547,1,"Private, for-profit",0,1,18042.0,177.0,9833.0,104,Paul Mitchell the School-Fort Myers
+191,5109,"Allied Health Diagnostic, Intervention, and Treatment Professions.",475714,1,"Private, for-profit",1,1,64877.0,82.0,9500.0,101,American Medical Academy
+192,1504,Electromechanical Instrumentation and Maintenance Technologies/Technicians.,476063,1,"Private, for-profit",0,1,38927.0,109.0,9500.0,101,Tulsa Welding School-Jacksonville
+193,1002,Audiovisual Communications Technologies/Technicians.,476814,2,"Private, for-profit",1,1,28608.0,100.0,7853.0,83,Florida Institute of Recording Sound and Technology
+194,5006,Film/Video and Photographic Arts.,476814,2,"Private, for-profit",1,1,18752.0,37.0,7853.0,83,Florida Institute of Recording Sound and Technology
+195,5108,Allied Health and Medical Assisting Services.,476939,1,"Private, for-profit",1,1,22730.0,71.0,9097.0,96,FVI School of Nursing and Technology
+196,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",476939,1,"Private, for-profit",1,1,18786.0,81.0,6458.0,68,FVI School of Nursing and Technology
+197,1104,Information Science/Studies.,480569,3,"Private, nonprofit",0,3,101605.0,52.0,48000.0,509,Florida Institute of Technology-Online
+198,4228,"Clinical, Counseling and Applied Psychology.",480569,3,"Private, nonprofit",0,3,43108.0,64.0,27205.0,288,Florida Institute of Technology-Online
+199,4901,Air Transportation.,480569,3,"Private, nonprofit",0,3,68636.0,43.0,27000.0,286,Florida Institute of Technology-Online
+200,5107,Health and Medical Administrative Services.,480569,3,"Private, nonprofit",0,3,36381.0,27.0,50351.0,534,Florida Institute of Technology-Online
+201,5107,Health and Medical Administrative Services.,480569,3,"Private, nonprofit",0,5,80610.0,39.0,41000.0,466,Florida Institute of Technology-Online
+202,5202,"Business Administration, Management and Operations.",480569,3,"Private, nonprofit",0,3,58663.0,55.0,34374.0,364,Florida Institute of Technology-Online
+203,5202,"Business Administration, Management and Operations.",480569,3,"Private, nonprofit",0,5,90978.0,381.0,37584.0,428,Florida Institute of Technology-Online
+204,5203,Accounting and Related Services.,480569,3,"Private, nonprofit",0,3,48986.0,29.0,33685.0,357,Florida Institute of Technology-Online
+205,5203,Accounting and Related Services.,480569,3,"Private, nonprofit",0,5,69689.0,32.0,41000.0,466,Florida Institute of Technology-Online
+206,5212,Management Information Systems and Services.,480569,3,"Private, nonprofit",0,5,84920.0,127.0,37584.0,428,Florida Institute of Technology-Online
+207,0907,"Radio, Television, and Digital Communication.",480851,1,"Private, for-profit",1,1,31156.0,57.0,9500.0,101,Miami Media School
+208,1204,Cosmetology and Related Personal Grooming Services.,481483,1,"Private, for-profit",1,1,20316.0,129.0,6723.0,71,Boca Beauty Academy
+209,5135,Somatic Bodywork and Related Therapeutic Services.,481483,0,"Private, for-profit",1,1,34649.0,24.0,5865.0,62,Boca Beauty Academy
+210,0901,Communication and Media Studies.,482459,2,"Private, for-profit",0,3,47238.0,40.0,45000.0,477,DeVry University-Florida
+211,1105,Computer Systems Analysis.,482459,2,"Private, for-profit",0,3,65324.0,1140.0,40509.0,429,DeVry University-Florida
+212,1108,Computer Software and Media Applications.,482459,2,"Private, for-profit",0,3,38887.0,422.0,41879.0,444,DeVry University-Florida
+213,1109,Computer Systems Networking and Telecommunications.,482459,2,"Private, for-profit",0,2,51108.0,628.0,27582.0,292,DeVry University-Florida
+214,1109,Computer Systems Networking and Telecommunications.,482459,2,"Private, for-profit",0,3,66360.0,797.0,41421.0,439,DeVry University-Florida
+215,1109,Computer Systems Networking and Telecommunications.,482459,1,"Private, for-profit",0,5,78296.0,120.0,38939.0,443,DeVry University-Florida
+216,1109,Computer Systems Networking and Telecommunications.,482459,1,"Private, for-profit",0,8,71949.0,44.0,30617.0,348,DeVry University-Florida
+217,1503,Electrical Engineering Technologies/Technicians.,482459,2,"Private, for-profit",0,2,52465.0,165.0,25436.0,270,DeVry University-Florida
+218,1503,Electrical Engineering Technologies/Technicians.,482459,2,"Private, for-profit",0,3,75968.0,429.0,43028.0,456,DeVry University-Florida
+219,1504,Electromechanical Instrumentation and Maintenance Technologies/Technicians.,482459,2,"Private, for-profit",0,3,72119.0,115.0,50844.0,539,DeVry University-Florida
+220,1512,Computer Engineering Technologies/Technicians.,482459,2,"Private, for-profit",0,3,72749.0,146.0,49107.0,521,DeVry University-Florida
+221,4301,Criminal Justice and Corrections.,482459,2,"Private, for-profit",0,3,46188.0,250.0,46957.0,498,DeVry University-Florida
+222,5107,Health and Medical Administrative Services.,482459,2,"Private, for-profit",0,3,50285.0,92.0,43973.0,466,DeVry University-Florida
+223,5201,"Business/Commerce, General.",482459,2,"Private, for-profit",0,3,56664.0,183.0,40529.0,430,DeVry University-Florida
+224,5202,"Business Administration, Management and Operations.",482459,2,"Private, for-profit",0,3,55550.0,5551.0,35660.0,378,DeVry University-Florida
+225,5202,"Business Administration, Management and Operations.",482459,1,"Private, for-profit",0,5,77117.0,2506.0,44529.0,507,DeVry University-Florida
+226,5202,"Business Administration, Management and Operations.",482459,1,"Private, for-profit",0,8,70409.0,198.0,46692.0,531,DeVry University-Florida
+227,5203,Accounting and Related Services.,482459,2,"Private, for-profit",0,3,54099.0,73.0,45916.0,487,DeVry University-Florida
+228,5203,Accounting and Related Services.,482459,1,"Private, for-profit",0,5,72954.0,781.0,39978.0,455,DeVry University-Florida
+229,5203,Accounting and Related Services.,482459,1,"Private, for-profit",0,8,67831.0,97.0,42015.0,478,DeVry University-Florida
+230,5210,Human Resources Management and Services.,482459,1,"Private, for-profit",0,5,59771.0,343.0,45892.0,522,DeVry University-Florida
+231,5210,Human Resources Management and Services.,482459,1,"Private, for-profit",0,8,60341.0,92.0,30750.0,350,DeVry University-Florida
+232,5212,Management Information Systems and Services.,482459,1,"Private, for-profit",0,5,84349.0,407.0,46275.0,526,DeVry University-Florida
+233,1204,Cosmetology and Related Personal Grooming Services.,483896,1,"Private, for-profit",1,1,21151.0,65.0,3167.0,34,Parisian Spa Institute
+234,0907,"Radio, Television, and Digital Communication.",484473,3,Public,0,3,49796.0,270.0,15000.0,159,University of Florida-Online
+235,0909,"Public Relations, Advertising, and Applied Communication.",484473,3,Public,0,3,58636.0,359.0,15321.0,162,University of Florida-Online
+236,1101,"Computer and Information Sciences, General.",484473,3,Public,0,3,108528.0,111.0,15000.0,159,University of Florida-Online
+237,1419,Mechanical Engineering.,484473,3,Public,0,3,83832.0,331.0,18131.0,192,University of Florida-Online
+238,2601,"Biology, General.",484473,3,Public,0,3,47840.0,160.0,15000.0,159,University of Florida-Online
+239,2605,Microbiological Sciences and Immunology.,484473,3,Public,0,3,43355.0,60.0,14942.0,158,University of Florida-Online
+240,3099,"Multi/Interdisciplinary Studies, Other.",484473,3,Public,0,3,50493.0,26.0,14800.0,157,University of Florida-Online
+241,3105,Health and Physical Education/Fitness.,484473,3,Public,0,3,50460.0,113.0,15000.0,159,University of Florida-Online
+242,4006,Geological and Earth Sciences/Geosciences.,484473,3,Public,0,3,50033.0,39.0,19737.0,209,University of Florida-Online
+243,4201,"Psychology, General.",484473,3,Public,0,3,46888.0,331.0,16598.0,176,University of Florida-Online
+244,4502,Anthropology.,484473,3,Public,0,3,41364.0,167.0,14491.0,154,University of Florida-Online
+245,4504,Criminology.,484473,3,Public,0,3,49912.0,207.0,15224.0,161,University of Florida-Online
+246,4507,Geography and Cartography.,484473,3,Public,0,3,54432.0,18.0,16407.0,174,University of Florida-Online
+247,4511,Sociology.,484473,3,Public,0,3,46050.0,144.0,15000.0,159,University of Florida-Online
+248,5001,"Visual and Performing Arts, General.",484473,3,Public,0,3,86575.0,26.0,18657.0,198,University of Florida-Online
+249,5102,Communication Disorders Sciences and Services.,484473,3,Public,0,3,52814.0,56.0,15000.0,159,University of Florida-Online
+250,5122,Public Health.,484473,3,Public,0,3,54610.0,116.0,15454.0,164,University of Florida-Online
+251,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",484473,3,Public,0,3,68854.0,121.0,16500.0,175,University of Florida-Online
+252,5202,"Business Administration, Management and Operations.",484473,3,Public,0,3,63871.0,322.0,15000.0,159,University of Florida-Online
+253,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",485272,1,"Private, for-profit",0,3,98869.0,1796.0,34145.0,362,West Coast University-Miami
+254,1204,Cosmetology and Related Personal Grooming Services.,485379,1,"Private, for-profit",0,1,16655.0,502.0,6333.0,67,Hollywood Institute of Beauty Careers-West Palm Beach
+255,5135,Somatic Bodywork and Related Therapeutic Services.,485379,1,"Private, for-profit",0,1,19442.0,60.0,6333.0,67,Hollywood Institute of Beauty Careers-West Palm Beach
+256,1204,Cosmetology and Related Personal Grooming Services.,485388,1,"Private, for-profit",0,1,16655.0,502.0,6333.0,67,Hollywood Institute of Beauty Careers-Casselberry
+257,5135,Somatic Bodywork and Related Therapeutic Services.,485388,1,"Private, for-profit",0,1,19442.0,60.0,6333.0,67,Hollywood Institute of Beauty Careers-Casselberry
+258,1204,Cosmetology and Related Personal Grooming Services.,487311,0,"Private, nonprofit",1,1,17824.0,117.0,7667.0,81,Jones Technical Institute
+259,4706,Vehicle Maintenance and Repair Technologies.,487311,1,"Private, nonprofit",1,2,48341.0,32.0,18167.0,193,Jones Technical Institute
+260,5135,Somatic Bodywork and Related Therapeutic Services.,487311,0,"Private, nonprofit",1,1,20582.0,54.0,6333.0,67,Jones Technical Institute
+261,1101,"Computer and Information Sciences, General.",487384,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Pembroke Pines
+262,1512,Computer Engineering Technologies/Technicians.,487384,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Pembroke Pines
+263,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487384,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Pembroke Pines
+264,5107,Health and Medical Administrative Services.,487384,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Pembroke Pines
+265,5108,Allied Health and Medical Assisting Services.,487384,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Pembroke Pines
+266,5122,Public Health.,487384,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Pembroke Pines
+267,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",487384,1,"Private, for-profit",0,2,54348.0,114.0,28285.0,300,Florida Career College-Pembroke Pines
+268,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487384,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Pembroke Pines
+269,1101,"Computer and Information Sciences, General.",487393,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-West Palm Beach
+270,1204,Cosmetology and Related Personal Grooming Services.,487393,0,"Private, for-profit",0,1,17641.0,234.0,11718.0,124,Florida Career College-West Palm Beach
+271,1512,Computer Engineering Technologies/Technicians.,487393,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-West Palm Beach
+272,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487393,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-West Palm Beach
+273,5107,Health and Medical Administrative Services.,487393,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-West Palm Beach
+274,5108,Allied Health and Medical Assisting Services.,487393,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-West Palm Beach
+275,5122,Public Health.,487393,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-West Palm Beach
+276,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487393,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-West Palm Beach
+277,1101,"Computer and Information Sciences, General.",487409,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Hialeah
+278,1512,Computer Engineering Technologies/Technicians.,487409,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Hialeah
+279,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487409,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Hialeah
+280,5107,Health and Medical Administrative Services.,487409,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Hialeah
+281,5108,Allied Health and Medical Assisting Services.,487409,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Hialeah
+282,5122,Public Health.,487409,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Hialeah
+283,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487409,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Hialeah
+284,1101,"Computer and Information Sciences, General.",487418,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Lauderdale Lakes
+285,1204,Cosmetology and Related Personal Grooming Services.,487418,0,"Private, for-profit",0,1,17641.0,234.0,11718.0,124,Florida Career College-Lauderdale Lakes
+286,1512,Computer Engineering Technologies/Technicians.,487418,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Lauderdale Lakes
+287,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487418,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Lauderdale Lakes
+288,5108,Allied Health and Medical Assisting Services.,487418,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Lauderdale Lakes
+289,5122,Public Health.,487418,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Lauderdale Lakes
+290,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",487418,0,"Private, for-profit",0,2,54348.0,114.0,28285.0,300,Florida Career College-Lauderdale Lakes
+291,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487418,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Lauderdale Lakes
+292,1101,"Computer and Information Sciences, General.",487427,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Tampa
+293,1512,Computer Engineering Technologies/Technicians.,487427,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Tampa
+294,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487427,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Tampa
+295,5107,Health and Medical Administrative Services.,487427,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Tampa
+296,5108,Allied Health and Medical Assisting Services.,487427,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Tampa
+297,5122,Public Health.,487427,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Tampa
+298,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487427,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Tampa
+299,1101,"Computer and Information Sciences, General.",487436,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Jacksonville
+300,1512,Computer Engineering Technologies/Technicians.,487436,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Jacksonville
+301,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487436,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Jacksonville
+302,5108,Allied Health and Medical Assisting Services.,487436,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Jacksonville
+303,5122,Public Health.,487436,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Jacksonville
+304,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487436,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Jacksonville
+305,1101,"Computer and Information Sciences, General.",487445,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Boynton Beach
+306,1204,Cosmetology and Related Personal Grooming Services.,487445,0,"Private, for-profit",0,1,17641.0,234.0,11718.0,124,Florida Career College-Boynton Beach
+307,1512,Computer Engineering Technologies/Technicians.,487445,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Boynton Beach
+308,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487445,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Boynton Beach
+309,5107,Health and Medical Administrative Services.,487445,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Boynton Beach
+310,5108,Allied Health and Medical Assisting Services.,487445,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Boynton Beach
+311,5122,Public Health.,487445,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Boynton Beach
+312,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",487445,0,"Private, for-profit",0,2,54348.0,114.0,28285.0,300,Florida Career College-Boynton Beach
+313,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487445,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Boynton Beach
+314,1101,"Computer and Information Sciences, General.",487454,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Margate
+315,1512,Computer Engineering Technologies/Technicians.,487454,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Margate
+316,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487454,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Margate
+317,5107,Health and Medical Administrative Services.,487454,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Margate
+318,5108,Allied Health and Medical Assisting Services.,487454,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Margate
+319,5122,Public Health.,487454,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Margate
+320,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487454,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Margate
+321,1101,"Computer and Information Sciences, General.",487472,1,"Private, for-profit",0,2,33884.0,101.0,18347.0,195,Florida Career College-Orlando
+322,1204,Cosmetology and Related Personal Grooming Services.,487472,0,"Private, for-profit",0,1,17641.0,234.0,11718.0,124,Florida Career College-Orlando
+323,1512,Computer Engineering Technologies/Technicians.,487472,1,"Private, for-profit",0,1,26890.0,237.0,10313.0,109,Florida Career College-Orlando
+324,4702,"Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR).",487472,1,"Private, for-profit",0,1,34093.0,155.0,9500.0,101,Florida Career College-Orlando
+325,5107,Health and Medical Administrative Services.,487472,1,"Private, for-profit",0,1,28737.0,378.0,9500.0,101,Florida Career College-Orlando
+326,5108,Allied Health and Medical Assisting Services.,487472,1,"Private, for-profit",0,1,24719.0,1049.0,9500.0,101,Florida Career College-Orlando
+327,5122,Public Health.,487472,1,"Private, for-profit",0,2,30264.0,50.0,20000.0,212,Florida Career College-Orlando
+328,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",487472,1,"Private, for-profit",0,1,21476.0,500.0,9500.0,101,Florida Career College-Orlando
+329,1204,Cosmetology and Related Personal Grooming Services.,489238,1,"Private, for-profit",0,1,20316.0,129.0,6723.0,71,Boca Beauty Academy-Parkland
+330,5135,Somatic Bodywork and Related Therapeutic Services.,489238,1,"Private, for-profit",0,1,34649.0,24.0,5865.0,62,Boca Beauty Academy-Parkland
+331,5108,Allied Health and Medical Assisting Services.,490975,1,"Private, for-profit",0,1,28120.0,161.0,9500.0,101,Fortis College-Cutler Bay
+332,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",490975,1,"Private, for-profit",0,2,67227.0,205.0,28049.0,297,Fortis College-Cutler Bay
+333,1204,Cosmetology and Related Personal Grooming Services.,491136,1,"Private, for-profit",0,1,20441.0,1142.0,12090.0,128,Empire Beauty School-Tampa
+334,1204,Cosmetology and Related Personal Grooming Services.,491145,1,"Private, for-profit",0,1,20245.0,850.0,12500.0,133,Empire Beauty School-Lakeland
+335,1204,Cosmetology and Related Personal Grooming Services.,492360,1,"Private, for-profit",0,1,16956.0,63.0,6774.0,72,The Salon Professional Academy-Delray Beach
+336,1204,Cosmetology and Related Personal Grooming Services.,495369,1,"Private, for-profit",0,1,27864.0,93.0,6492.0,69,Paul Mitchell the School-Fort Lauderdale
+337,5107,Health and Medical Administrative Services.,496973,2,"Private, nonprofit",0,2,30692.0,346.0,25615.0,272,Herzing University-Tampa
+338,5107,Health and Medical Administrative Services.,496973,2,"Private, nonprofit",0,3,45666.0,157.0,37778.0,401,Herzing University-Tampa
+339,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",496973,1,"Private, nonprofit",0,3,70560.0,188.0,27573.0,292,Herzing University-Tampa
+340,5139,"Practical Nursing, Vocational Nursing and Nursing Assistants.",496973,1,"Private, nonprofit",0,1,55934.0,51.0,14375.0,152,Herzing University-Tampa
+341,5202,"Business Administration, Management and Operations.",496973,2,"Private, nonprofit",0,2,37295.0,71.0,29440.0,312,Herzing University-Tampa
+342,5202,"Business Administration, Management and Operations.",496973,2,"Private, nonprofit",0,3,55767.0,158.0,33791.0,358,Herzing University-Tampa
+343,5202,"Business Administration, Management and Operations.",496973,2,"Private, nonprofit",0,5,49866.0,173.0,41000.0,466,Herzing University-Tampa
+344,5138,"Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",496991,1,"Private, for-profit",0,2,67737.0,958.0,24808.0,263,Galen Health Institutes-Miami Campus
+345,1204,Cosmetology and Related Personal Grooming Services.,497222,1,"Private, for-profit",0,1,16956.0,63.0,6774.0,72,Salon Professional Academy-Elevate Salon Institute

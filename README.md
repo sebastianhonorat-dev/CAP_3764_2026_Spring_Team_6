@@ -1,82 +1,91 @@
 # Institutional ROI Analysis
 
-**Course:** Advanced Data Science — Spring 2026  
-**Instructor:** Prof. Gustavo García Melero  
-**Team:** Sebastian Honorat, Frank Vela  
+**Course:** Advanced Data Science — Spring 2026
+**Instructor:** Prof. Gustavo García Melero
+**Team:** Sebastian Honorat, Frank Vela
 
 ---
 
 ## Overview
 
-This project investigates **institutional return on investment (ROI)** in U.S. higher education by comparing economic outcomes to institutional constraints at the degree level.
+This project examines **institutional return on investment (ROI)** in U.S. higher education by analyzing economic outcomes alongside institutional characteristics at the degree level.
 
-The core goal is to move beyond raw earnings or debt figures and instead evaluate how effectively institutions perform **relative to expectations**, given factors such as selectivity, size, and student composition.
+Rather than relying solely on raw earnings or debt metrics, the analysis aims to evaluate institutional performance **relative to expectations**, accounting for factors such as selectivity, enrollment scale, and student composition.
 
-At its current stage, the project focuses on **data ingestion and exploratory analysis** using the U.S. Department of Education’s College Scorecard API, with plans to integrate OpenAlex research output data in later phases.
+The current phase centers on **data ingestion and exploratory analysis** using the U.S. Department of Education’s College Scorecard API. Future iterations will incorporate research productivity data from OpenAlex to support a broader institutional performance framework.
 
 ---
 
 ## Research Focus
 
-Key questions guiding the project:
+The project is guided by the following questions:
 
-- Which institutions deliver **higher-than-expected economic outcomes** for graduates of a specific degree?
-- How do earnings and debt outcomes vary when normalized against institutional constraints?
-- How might economic ROI and research productivity differ across institutions with similar profiles?
+* Which institutions generate **above-expected economic outcomes** for graduates within specific degree programs?
+* How do earnings and debt metrics shift when contextualized by institutional constraints?
+* To what extent do economic ROI and research productivity diverge among otherwise comparable institutions?
 
-> **Note:** A final ROI or ranking equation has not yet been defined and will be developed iteratively based on data quality and exploratory findings.
+> **Note:** A formal ROI methodology has not yet been finalized. Model design will evolve iteratively as data coverage and exploratory insights mature.
 
 ---
 
 ## Data Sources
 
 ### College Scorecard API
-Used for degree-level outcomes and institutional characteristics, including:
-- Median earnings
-- Student debt
-- Completion and retention rates
-- Admissions and selectivity proxies
 
-### OpenAlex Scholarly Knowledge Graph *(planned)*
-Intended for future integration of:
-- Publication counts by institution
-- Citation impact metrics
-- Field-normalized research output
+Primary source for degree-level outcomes and institutional attributes, including:
+
+* Median post-graduation earnings
+* Student debt levels
+* Completion and retention rates
+* Admissions metrics and selectivity indicators
+
+### OpenAlex Scholarly Knowledge Graph *(Planned)*
+
+Future integration will support analysis of:
+
+* Institutional publication volume
+* Citation-based impact measures
+* Field-normalized research output
 
 ---
 
 ## Current Project Status
 
 ### Implemented
-- College Scorecard API ingestion
-- Environment-based API key management
-- Initial exploratory data analysis (EDA) notebooks
-- CSV persistence of ingested data
 
-### In Progress / Planned
-- Robust pagination handling for full API coverage
-- Definition of a degree-level institutional ROI or value-added metric
-- Integration of OpenAlex research data
-- Comparative institutional analysis
+* College Scorecard API ingestion pipeline
+* Secure environment-based API key management
+* Exploratory data analysis (EDA) notebooks
+* CSV-based persistence of retrieved datasets
+
+### In Progress
+
+* Comprehensive pagination for full API coverage
+* Definition of a degree-level ROI / value-added metric
+* OpenAlex data integration
+* Cross-institutional comparative analysis
 
 ### Explicitly Out of Scope
-- Machine learning models
-- Predictive modeling beyond baseline expectation frameworks
+
+* Machine learning models
+* Predictive systems beyond baseline expectation frameworks
 
 ---
 
 ## Tech Stack
 
-- **Python:** 3.11  
-- **Libraries:**
-  - `requests`
-  - `python-dotenv`
-  - `pandas`
-  - `numpy`
-  - `plotly`
-  - `pathlib`
-- **Environment:** Conda  
-- **APIs:** College Scorecard, OpenAlex  
+**Python:** 3.11
+
+**Core Libraries:**
+
+* `requests`
+* `python-dotenv`
+* `pandas`
+* `numpy`
+* `plotly`
+
+**Environment:** Conda
+**APIs:** College Scorecard, OpenAlex
 
 ---
 
@@ -100,48 +109,59 @@ Intended for future integration of:
 ├── requirements.txt
 ├── .env
 └── README.md
+```text
+
 ---
 
 ## Setup & Usage
 
-### Environment Setup
+### Environment Configuration
 
-Create a `.env` file in the project root with:
+Create a `.env` file in the project root:
 
 ```env
 COLLEGE_SCORECARD_API_KEY=your_key_here
 OPENALEX_API_KEY=your_key_here
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-Data Ingestion
+---
 
-Run the College Scorecard ingestion script:
+## Data Ingestion
 
+Run the ingestion pipeline:
+
+```bash
 python src/ingest_scorecard.py
+```
 
-This script retrieves data from the API and writes CSV files to:
+Retrieved data is written to:
 
+```
 data/raw/scorecard/
+```
 
-    There is currently no unified main script. Ingestion and analysis are intentionally modular.
+The project intentionally separates ingestion and analysis to maintain modularity and support iterative development.
 
-Notes & Limitations
+---
 
-    API pagination is not yet fully implemented; current ingestion may not capture all available pages.
+## Notes & Limitations
 
-    ROI and ranking methodologies are under active design and have not been finalized.
+* API pagination is not yet fully implemented; current ingestion may not capture the complete dataset.
+* ROI methodology remains under active development.
+* Findings at this stage should be interpreted as exploratory rather than definitive institutional rankings.
 
-    Results at this stage should be considered exploratory, not definitive rankings.
+---
 
-Academic & Portfolio Use
+## Academic & Portfolio Context
 
 This repository is structured to support:
 
-    Reproducible academic analysis
-
-    Transparent methodological development
-
-    Incremental expansion into a broader institutional performance framework
+* Reproducible academic research
+* Transparent methodological iteration
+* Incremental expansion toward a comprehensive institutional performance model

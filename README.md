@@ -61,7 +61,12 @@ Future integration will support analysis of:
 
 ### In Progress
 * Data cleaning and validation
+
+
+### In Progress
+* Data cleaning and validation
 * Definition of a degree-level ROI / value-added metric
+* Exploratory data analysis (EDA) notebooks
 * Exploratory data analysis (EDA) notebooks
 * OpenAlex data integration
 * Cross-institutional comparative analysis
@@ -125,6 +130,7 @@ COLLEGE_SCORECARD_API_KEY=your_key_here
 OPENALEX_API_KEY=your_key_here
 ```
 
+Create Conda environment:
 Create Conda environment:
 
 ```powershell

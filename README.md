@@ -55,13 +55,14 @@ Future integration will support analysis of:
 
 * College Scorecard API ingestion pipeline
 * Secure environment-based API key management
-* Exploratory data analysis (EDA) notebooks
 * CSV-based persistence of retrieved datasets
+* Comprehensive pagination for full API coverage
+
 
 ### In Progress
-
-* Comprehensive pagination for full API coverage
+* Data cleaning and validation
 * Definition of a degree-level ROI / value-added metric
+* Exploratory data analysis (EDA) notebooks
 * OpenAlex data integration
 * Cross-institutional comparative analysis
 
@@ -124,10 +125,11 @@ COLLEGE_SCORECARD_API_KEY=your_key_here
 OPENALEX_API_KEY=your_key_here
 ```
 
-Install dependencies:
+Create Conda environment:
 
-```bash
-pip install -r requirements.txt
+```powershell
+conda env create -f environment.yml
+conda activate institutional-roi
 ```
 
 ---

@@ -1,0 +1,6 @@
+# scripts/run_ingest.py
+
+from ira.ingest.ingest_scorecard import collect, save
+
+df = collect("FL")
+save(df)

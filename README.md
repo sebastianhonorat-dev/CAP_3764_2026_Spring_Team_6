@@ -130,6 +130,7 @@ Create Conda environment:
 ```powershell
 conda env create -f environment.yml
 conda activate institutional-roi
+pip install -e .
 ```
 
 ---

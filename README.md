@@ -57,17 +57,17 @@ Future integration will support analysis of:
 * Secure environment-based API key management
 * CSV-based persistence of retrieved datasets
 * Comprehensive pagination for full API coverage
-
-
-### In Progress
-* Data cleaning and validation
+* Interinstitution CID code tracking notebook
+* Exploratory data analysis (EDA) notebooks
 
 
 ### In Progress
 * Data cleaning and validation
 * Definition of a degree-level ROI / value-added metric
-* Exploratory data analysis (EDA) notebooks
-* Exploratory data analysis (EDA) notebooks
+
+
+### To Do
+* Data cleaning and validation
 * OpenAlex data integration
 * Cross-institutional comparative analysis
 
@@ -99,21 +99,23 @@ Future integration will support analysis of:
 
 ```text
 .
+├── .github/
+│   ├── ISSUE_TEMPLATE/standard_issue.md
+│   └── pull_request_template.md
 ├── data/
-│   └── raw/
-│       └── scorecard/
-│           └── test.csv
+│   └── raw/scorecard/
 ├── notebooks/
-│   ├── setup.ipynb
-│   └── eda_scorecard.ipynb
+│   ├── eda_cip_code_distribution.ipynb
+│   └── eda_outcomes_debt_earnings.ipynb
+├── scripts/
+│   └── run_ingest
 ├── src/
-│   └── ingest_scorecard.py
-├── Misc/
-│   └── CollegeScorecardDataDictionary.xlsx
-├── deps.py
-├── requirements.in
-├── requirements.txt
-├── .env
+│   └── ira/
+│       ├── ingest/
+│       ├── clean/
+│       └── validate/
+├── environment.yml
+├── pyproject.toml
 └── README.md
 ```
 
@@ -130,7 +132,6 @@ COLLEGE_SCORECARD_API_KEY=your_key_here
 OPENALEX_API_KEY=your_key_here
 ```
 
-Create Conda environment:
 Create Conda environment:
 
 ```powershell
@@ -161,7 +162,6 @@ The project intentionally separates ingestion and analysis to maintain modularit
 
 ## Notes & Limitations
 
-* API pagination is not yet fully implemented; current ingestion may not capture the complete dataset.
 * ROI methodology remains under active development.
 * Findings at this stage should be interpreted as exploratory rather than definitive institutional rankings.
 

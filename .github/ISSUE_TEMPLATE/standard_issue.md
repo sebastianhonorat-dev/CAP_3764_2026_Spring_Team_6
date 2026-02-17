@@ -1,3 +1,11 @@
+---
+name: Standard Issue
+about: Use this for most project work
+title: ""
+labels: ""
+assignees: ""
+---
+
 ## Context
 What problem are we solving? Why does this matter?
 

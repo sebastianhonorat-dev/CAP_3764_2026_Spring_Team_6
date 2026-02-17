@@ -4,5 +4,7 @@ from ira.ingest.ingest_scorecard import collect, save
 from ira.clean.clean_scorecard import clean
 
 df = collect("FL")
-df = clean(df)
 save(df)
+
+df = clean(df)
+save(df, file_type="clean")

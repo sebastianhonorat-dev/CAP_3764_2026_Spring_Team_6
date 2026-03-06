@@ -6,6 +6,7 @@ import pandas as pd
 from pathlib import Path
 from ira.config import SCORECARD_KEY, BASE_URL
 import math
+import time
 
 
 def collect(state: str = "FL", per_page: int = 100) -> pd.DataFrame:
@@ -37,6 +38,8 @@ def collect(state: str = "FL", per_page: int = 100) -> pd.DataFrame:
     params["page"] = "0"
     response = requests.get(BASE_URL, params=params)
 
+    time.sleep(0.8)  # start with 0.3–0.8 seconds
+
     data = response.json()
     total = int(data["metadata"]["total"])
     per_page = int(data["metadata"]["per_page"])
@@ -53,6 +56,8 @@ def collect(state: str = "FL", per_page: int = 100) -> pd.DataFrame:
 
 
     for page in range(1, total_pages):
+        time.sleep(0.3)  # start with 0.3–0.8 seconds
+
         params["page"] = str(page)
         response = requests.get(BASE_URL, params=params)
         
@@ -82,8 +87,13 @@ def collect(state: str = "FL", per_page: int = 100) -> pd.DataFrame:
     print(f"Total Rows/Programs ingested: {len(df)}")
     return df
 
-def save(df: pd.DataFrame, filename: str = "scorecard_FL_programs.csv") -> None :
+def save(df: pd.DataFrame, file_type: str="", file_name: str = "scorecard_FL_programs.csv") -> None :
     root = Path(__file__).resolve().parents[3]
-    target_path = root / "data" / "raw" / "scorecard" / "scorecard_FL_programs.csv"
-    target_path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(target_path, index=False)
+    if file_type == "clean":
+        target_path = root / "data" / "clean" / "scorecard" / f"clean_{file_name}"
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        df.to_csv(target_path, index=False)
+    else:
+        target_path = root / "data" / "raw" / "scorecard" / file_name
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        df.to_csv(target_path, index=False)

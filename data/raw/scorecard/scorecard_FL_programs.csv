@@ -1,4 +1,4 @@
-code,title,unit_id,distance,school.type,school.main_campus,credential.level,earnings.4_yr.overall_median_earnings,earnings.4_yr.working_not_enrolled.overall_count,debt.staff_grad_plus.all.eval_inst.median,debt.staff_grad_plus.all.eval_inst.median_payment,school.name
+code,title,unit_id,distance,school_type,school_main_campus,credential_level,4_yr_median_earnings,4_yr_working_count,debt_median,debt_median_payment,school_name
 3906,Theological and Ministerial Studies.,132408,3,"Private, nonprofit",1,3,31484.0,36.0,23946.0,254.0,Baptist University of Florida
 1101,"Computer and Information Sciences, General.",132471,2,"Private, nonprofit",1,3,52714.0,66.0,27750.0,294.0,Barry University
 1304,Educational Administration and Supervision.,132471,2,"Private, nonprofit",1,5,69477.0,87.0,51250.0,583.0,Barry University

@@ -1,8 +1,14 @@
 import pandas as pd
 import numpy as np
-import time
+
+from ira.logging_utils import get_logger
+
+
+logger = get_logger(__name__)
 
 def clean (df: pd.DataFrame) -> pd.DataFrame:
+    original_shape = df.shape
+    logger.info("Starting clean() with shape=%s", original_shape)
 
     #----------------------------------------- Standardizing column names
     df.columns = df.columns.str.replace(".", "_")
@@ -47,12 +53,28 @@ def clean (df: pd.DataFrame) -> pd.DataFrame:
         )
     # ----------------------------------------- Numeric cleanup
     numeric_cols = df.select_dtypes(include="number").columns
-    print(f"Numeric columns: {numeric_cols}")
+    logger.info("Applying numeric cleanup to %s numeric columns", len(numeric_cols))
     df[numeric_cols] = df[numeric_cols].mask(df[numeric_cols] < 0, np.nan)
 
     #----------------------------------------- De-duplicating rows
-    if df.duplicated().sum():
-        print(f"{df.duplicated().sum()} duplicated rows found.\n{df[df.duplicated()==True]}")
-        # df = df.drop_duplicates()
+    duplicate_count = int(df.duplicated().sum())
+    if duplicate_count:
+        logger.warning("Removing %s duplicated rows", duplicate_count)
+        df = df.drop_duplicates()
+
+    missing_counts = df.isna().sum()
+    missing_counts = missing_counts[missing_counts > 0].sort_values(ascending=False)
+    if not missing_counts.empty:
+        top_missing = ", ".join(
+            f"{column}={count}" for column, count in missing_counts.head(5).items()
+        )
+        logger.warning(
+            "Missing values remain in %s columns after cleaning; top columns: %s",
+            len(missing_counts),
+            top_missing,
+        )
+
+    logger.info("Completed clean() with shape=%s", df.shape)
+    logger.info("Cleaning shape summary: %s -> %s", original_shape, df.shape)
 
     return df

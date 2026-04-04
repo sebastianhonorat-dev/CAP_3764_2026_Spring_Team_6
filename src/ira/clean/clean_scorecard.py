@@ -5,12 +5,12 @@ import time
 def clean (df: pd.DataFrame) -> pd.DataFrame:
 
     #----------------------------------------- Standardizing column names
-    df.columns = df.columns.str.replace(".", "_")
+    df.columns = df.columns.str.replace(r".", "_")
 
     df.columns = (
         df.columns
             .str.replace(
-                r"(earnings_|overall_|staff_grad_plus_all_eval_inst_|not_enrolled_|latest_school_|latest_student_demographics_|latest_student_|latest_school_|latest_admissions_)"
+                r"(earnings_|overall_|staff_grad_plus_all_eval_inst_|not_enrolled_|latest_school_|latest_student_demographics_|latest_student_|latest_school_|latest_admissions_|latest_academics_|DRVF2024)"
                 ,""
                 ,regex=True
             )

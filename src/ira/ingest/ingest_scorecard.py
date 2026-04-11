@@ -225,9 +225,12 @@ def get_with_retries(url, params, tries=5, timeout=30):
         logger.error("Exhausted retries for %s after %s attempts", redact_url(last.url), tries)
     return last
 
-
-def save(df: pd.DataFrame, file_type: str="raw", file_name: str = "scorecard_FL_programs.csv") -> None :
+def save(df: pd.DataFrame, file_type: str="scorecard",clean: str = 0, file_name: str = "scorecard_FL_programs.csv") -> None :
     root = Path(__file__).resolve().parents[3]
-    target_path = root/"data"/file_type/"scorecard"/f"{file_type}_{file_name}"
+    if clean:
+        target_path = root/"data"/"clean"/file_type/f"clean_{file_name}.csv"
+    else:
+        target_path = root/"data"/"raw"/file_type/f"raw_{file_name}.csv"
+
     target_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(target_path, index=False)

@@ -1,6 +1,14 @@
 # Environment variables / secrets
 .env
-.env.*
+.idea/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.egg-info/
+logs.log
+*.log
+output.png
+temp_*.json
 
 #misc.
 .vscode/

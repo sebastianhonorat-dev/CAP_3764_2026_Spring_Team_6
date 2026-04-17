@@ -1,0 +1,23 @@
+name: institutional-roi
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pyarrow
+  - ipykernel
+  - pip
+  - pip:
+      - requests
+      - python-dotenv
+      - plotly
+      - kaleido
+      - xgboost
+      - optuna
+      - statsmodels

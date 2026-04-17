@@ -47,9 +47,11 @@ def clean (df: pd.DataFrame) -> pd.DataFrame:
         )
     # ----------------------------------------- Numeric cleanup
     numeric_cols = df.select_dtypes(include="number").columns
-    print(f"Numeric columns: {numeric_cols}")
-    df[numeric_cols] = df[numeric_cols].mask(df[numeric_cols] < 0, np.nan)
 
+    exclude_from_negative_mask = ["location_lon", "location_lat"]
+    cols_to_mask = [c for c in numeric_cols if c not in exclude_from_negative_mask]
+
+    df[cols_to_mask] = df[cols_to_mask].mask(df[cols_to_mask] < 0, np.nan)
     #----------------------------------------- De-duplicating rows
     if df.duplicated().sum():
         print(f"{df.duplicated().sum()} duplicated rows found.\n{df[df.duplicated()==True]}")

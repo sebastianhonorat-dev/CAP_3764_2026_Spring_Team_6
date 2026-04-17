@@ -1,8 +1,34 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ira"
 version = "0.1.0"
-dependencies = []
+dependencies = [
+    "altair",
+    "fastapi",
+    "joblib",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "python-multipart",
+    "requests",
+    "scikit-learn",
+    "shap",
+    "streamlit",
+    "uvicorn",
+    "xgboost",
+]
+
+[project.optional-dependencies]
+dev = ["httpx", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+pythonpath = ["src"]
+testpaths = ["tests"]

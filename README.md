@@ -151,10 +151,12 @@ streamlit run src/ira/streamlit_app.py
 
 The dashboard supports:
 
-- program search
+- a home dashboard for statewide comparisons
+- an individual prediction page with a single-record form
+- a saved Florida program explorer
 - side-by-side comparison of predicted and reported earnings
 - 1-, 4-, and 5-year earnings view
-- batch CSV upload for predictions
+- a separate batch CSV prediction page
 
 ## Tests
 
@@ -199,6 +201,7 @@ pip install -e .[dev]
 |-- src/
 |   `-- ira/
 |       |-- api.py
+|       |-- pages/
 |       |-- stability.py
 |       |-- streamlit_app.py
 |       `-- modeling/

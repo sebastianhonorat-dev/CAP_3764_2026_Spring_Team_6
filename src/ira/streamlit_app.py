@@ -31,21 +31,86 @@ YEAR_LABELS = {
 }
 
 FEATURE_LABELS = {
-    "code": "CIP code",
-    "distance": "Distance learning code",
-    "school_type": "School type",
-    "credential_level": "Credential level",
-    "locale": "Locale code",
-    "carnegie_size_setting": "Carnegie size and setting",
-    "open_admissions_policy": "Open admissions policy",
-    "title_iv_eligibility_type": "Title IV eligibility",
-    "selectivity_bucket": "Selectivity group",
+    "code": "Program CIP code",
+    "distance": "Online availability",
+    "school_type": "School ownership",
+    "credential_level": "Award type",
+    "locale": "Community type",
+    "carnegie_size_setting": "School size and campus setting",
+    "open_admissions_policy": "Open admissions",
+    "title_iv_eligibility_type": "Federal aid category",
+    "selectivity_bucket": "Admissions selectivity",
     "admission_rate_overall": "Admission rate",
     "location_lat": "Latitude",
     "location_lon": "Longitude",
     "median_family_income": "Median family income",
-    "students_with_pell_grant": "Students with Pell grant",
+    "students_with_pell_grant": "Students receiving Pell grants",
     "age_entry": "Average age at entry",
+}
+
+VALUE_LABELS = {
+    "distance": {
+        "0": "Not reported to IPEDS",
+        "1": "No credential in this field can be completed fully online",
+        "2": "Some credentials in this field can be completed fully online",
+        "3": "All credentials in this field can be completed fully online",
+    },
+    "locale": {
+        "11": "City: Large",
+        "12": "City: Midsize",
+        "13": "City: Small",
+        "21": "Suburb: Large",
+        "22": "Suburb: Midsize",
+        "23": "Suburb: Small",
+        "31": "Town: Fringe",
+        "32": "Town: Distant",
+        "33": "Town: Remote",
+        "41": "Rural: Fringe",
+        "42": "Rural: Distant",
+        "43": "Rural: Remote",
+    },
+    "carnegie_size_setting": {
+        "-2": "Not applicable",
+        "0": "Not classified",
+        "1": "Two-year, very small",
+        "2": "Two-year, small",
+        "3": "Two-year, medium",
+        "4": "Two-year, large",
+        "5": "Two-year, very large",
+        "6": "Four-year, very small, primarily nonresidential",
+        "7": "Four-year, very small, primarily residential",
+        "8": "Four-year, very small, highly residential",
+        "9": "Four-year, small, primarily nonresidential",
+        "10": "Four-year, small, primarily residential",
+        "11": "Four-year, small, highly residential",
+        "12": "Four-year, medium, primarily nonresidential",
+        "13": "Four-year, medium, primarily residential",
+        "14": "Four-year, medium, highly residential",
+        "15": "Four-year, large, primarily nonresidential",
+        "16": "Four-year, large, primarily residential",
+        "17": "Four-year, large, highly residential",
+        "18": "Exclusively graduate or professional",
+    },
+    "open_admissions_policy": {
+        "1": "Yes",
+        "2": "No",
+        "3": "Does not enroll first-time students",
+    },
+    "title_iv_eligibility_type": {
+        "1": "Participates in federal Title IV aid programs",
+        "2": "Branch campus of a Title IV participating institution",
+        "3": "Limited Title IV participation",
+        "5": "Not currently participating, but has an OPE ID",
+        "6": "Not currently participating and has no OPE ID",
+        "7": "Stopped participating during the collection year",
+        "8": "Became eligible during the collection year",
+        "19": "Not eligible",
+    },
+    "selectivity_bucket": {
+        "elite": "More selective admissions",
+        "mid": "Moderately selective admissions",
+        "open": "Broad-access admissions",
+    },
 }
 
 
@@ -95,6 +160,26 @@ def load_scored_programs(data_path: str, _predictor) -> pd.DataFrame:
     )
     scored["stability_status"] = scored["stability_status"].fillna("No multi-year signal")
     return scored.sort_values(["school_name", "title"]).reset_index(drop=True)
+
+
+def configure_page(page_title: str) -> None:
+    st.set_page_config(
+        page_title=page_title,
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
+    inject_styles()
+
+
+def load_app_state():
+    predictor = get_predictor()
+    metadata = predictor.metadata()
+    metadata["evaluation_table"] = predictor.evaluation_table().rename(
+        columns={"R2 (log scale)": "R^2 (log scale)"}
+    )
+    programs = load_scored_programs(str(DATA_PATH), predictor)
+    actual_programs = programs.dropna(subset=["gap"]).copy()
+    return predictor, metadata, programs, actual_programs
 
 
 def normalize_search_text(value: object) -> str:
@@ -158,6 +243,15 @@ def format_feature_value(column: str, value: object) -> str:
         return "Not available"
     if column == "credential_level":
         return format_credential_level(value)
+    if column in {
+        "distance",
+        "locale",
+        "carnegie_size_setting",
+        "open_admissions_policy",
+        "title_iv_eligibility_type",
+        "selectivity_bucket",
+    }:
+        return get_value_label(column, value)
     if column in {"admission_rate_overall", "students_with_pell_grant"}:
         return format_percent(value)
     if column == "median_family_income":
@@ -174,22 +268,52 @@ def shorten_text(value: object, limit: int = 36) -> str:
     return text[: limit - 3].rstrip() + "..."
 
 
+def normalize_form_value(value: object, fallback: str = "") -> str:
+    if pd.isna(value):
+        return fallback
+    return str(value)
+
+
+def normalize_code_label(value: object, fallback: str = "") -> str:
+    text = normalize_form_value(value, fallback=fallback).strip()
+    if re.fullmatch(r"-?\d+\.0", text):
+        return text[:-2]
+    return text
+
+
+def get_value_label(column: str, value: object) -> str:
+    normalized = normalize_code_label(value)
+    label = VALUE_LABELS.get(column, {}).get(normalized)
+    if label:
+        return label
+    return normalize_form_value(value, fallback="Not available")
+
+
+def get_choice_label(column: str, value: object) -> str:
+    if column == "credential_level":
+        return format_credential_level(value)
+    return format_feature_value(column, value)
+
+
+def render_hero(title: str, description: str, chips: list[str]) -> None:
+    chip_html = "".join(f"<span class='chip'>{chip}</span>" for chip in chips)
+    st.markdown(
+        f"""
+        <div class="hero">
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <div class="chip-row">{chip_html}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def build_chart_label(row: pd.Series) -> str:
     return (
         f"{row['code']} | "
         f"{shorten_text(row['title'], 28)} | "
         f"{shorten_text(row['school_name'], 20)}"
-    )
-
-
-def build_program_option_label(row: pd.Series) -> str:
-    actual_text = format_currency(row.get(PRIMARY_ACTUAL_COLUMN, row.get("4_yr_median_earnings")))
-    gap_text = format_signed_currency(row.get("gap"))
-    return (
-        f"{row['code']} | "
-        f"{shorten_text(row['title'], 50)} | "
-        f"{shorten_text(row['school_name'], 30)} | "
-        f"Actual: {actual_text} | Gap: {gap_text}"
     )
 
 
@@ -337,6 +461,61 @@ def inject_styles() -> None:
             margin-top: -0.2rem;
             margin-bottom: 0.9rem;
         }
+        .guide-card,
+        .spotlight-card,
+        .summary-card {
+            background: linear-gradient(180deg, rgba(18, 30, 46, 0.98) 0%, rgba(14, 24, 38, 0.98) 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+            padding: 1.2rem 1.3rem;
+            margin-bottom: 0.9rem;
+        }
+        .guide-card h3,
+        .spotlight-card h3,
+        .summary-card h3 {
+            color: var(--primary);
+            margin: 0 0 0.55rem 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+        .guide-card p,
+        .summary-card p {
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0.35rem 0;
+            font-size: 0.97rem;
+        }
+        .spotlight-kicker {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+        }
+        .spotlight-value {
+            color: var(--highlight);
+            font-size: 2.6rem;
+            line-height: 1.05;
+            font-weight: 900;
+            margin-bottom: 0.4rem;
+            text-shadow: 0 0 18px rgba(243, 182, 76, 0.12);
+        }
+        .spotlight-card p {
+            color: #dbe7f5;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .summary-line {
+            color: var(--text);
+            line-height: 1.55;
+            margin: 0.42rem 0;
+            font-size: 0.97rem;
+        }
+        .summary-line strong {
+            color: var(--primary);
+        }
         [data-testid="stSidebar"] {
             background: rgba(12, 21, 32, 0.98);
             border-left: 1px solid var(--border);
@@ -370,6 +549,28 @@ def inject_styles() -> None:
             background: #20405d;
             border-color: #3f6c92;
             color: white;
+        }
+        .stRadio [role="radiogroup"] {
+            gap: 0.55rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .stRadio [role="radiogroup"] label {
+            background: rgba(20, 33, 50, 0.96);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 0.5rem 0.85rem;
+            min-height: 2.9rem;
+            transition: all 0.18s ease;
+        }
+        .stRadio [role="radiogroup"] label:hover {
+            border-color: #3f6c92;
+            background: #17324b;
+        }
+        .stRadio [role="radiogroup"] label:has(input:checked) {
+            background: linear-gradient(180deg, #17324b 0%, #20425f 100%);
+            border-color: #4d7aa3;
+            box-shadow: 0 0 0 1px rgba(127, 183, 216, 0.16);
         }
         div[data-testid="stMetricValue"] {
             color: var(--highlight);
@@ -715,93 +916,15 @@ def build_highlight_table(frame: pd.DataFrame, ascending: bool) -> pd.DataFrame:
     )
 
 
-def build_results_table(frame: pd.DataFrame, max_rows: int = 12) -> pd.DataFrame:
-    preview = frame.copy()
-    if "match_score" in preview.columns:
-        preview = preview.head(max_rows)
-    else:
-        preview["sort_gap"] = preview["gap"].abs().fillna(-1)
-        preview = preview.sort_values(["sort_gap", "title"], ascending=[False, True]).head(max_rows)
-    return pd.DataFrame(
-        {
-            "CIP": preview["code"],
-            "Program": preview["title"],
-            "School": preview["school_name"],
-            "Actual": preview[PRIMARY_ACTUAL_COLUMN].map(format_currency),
-            "Predicted": preview[PRIMARY_PREDICTION_COLUMN].map(format_currency),
-            "Gap vs expected": preview["gap"].map(format_signed_currency),
-            "Compared with expected": preview["performance"],
-            "Multi-year pattern": preview["stability_status"],
-        }
-    )
-
-
-def build_feature_table(selected_row: pd.Series, feature_columns: list[str]) -> pd.DataFrame:
-    return pd.DataFrame(
-        {
-            "Feature": [FEATURE_LABELS.get(column, column) for column in feature_columns],
-            "Value": [format_feature_value(column, selected_row.get(column)) for column in feature_columns],
-        }
-    )
-
-
-def build_year_summary_table(selected_row: pd.Series, predictor) -> pd.DataFrame:
-    rows: list[dict[str, str]] = []
-    for year in predictor.years:
-        actual = selected_row.get(f"{year}_year_earning")
-        if pd.isna(actual):
-            actual = selected_row.get(TARGET_COLUMNS[year])
-
-        predicted = selected_row.get(f"{year}_year_pred")
-        if pd.isna(predicted):
-            predicted = selected_row.get(predictor.prediction_columns_by_year[year])
-
-        gap = selected_row.get(f"{year}_year_error")
-        if pd.isna(gap) and pd.notna(actual) and pd.notna(predicted):
-            gap = float(actual) - float(predicted)
-
-        rows.append(
-            {
-                "Time after completion": YEAR_LABELS[year],
-                "Actual": format_currency(actual),
-                "Predicted": format_currency(predicted),
-                "Gap": format_signed_currency(gap),
-            }
-        )
-
-    return pd.DataFrame(rows)
-
-
-def build_demo_examples(frame: pd.DataFrame) -> dict[str, int]:
-    if frame.empty:
-        return {}
-
-    examples: dict[str, int] = {}
-
-    selections = [
-        ("Recommended: Above expected", frame.nlargest(1, "gap").iloc[0]),
-        ("Recommended: Below expected", frame.nsmallest(1, "gap").iloc[0]),
-    ]
-
-    for prefix, row in selections:
-        label = (
-            f"{prefix} | {row['code']} | "
-            f"{shorten_text(row['title'], 30)} | {shorten_text(row['school_name'], 22)}"
-        )
-        examples[label] = int(row.name)
-
-    return examples
-
-
 def render_sidebar(metadata: dict[str, object], scored_programs: pd.DataFrame) -> None:
     metrics = metadata["metrics"]
     actual_programs = scored_programs[PRIMARY_ACTUAL_COLUMN].notna().sum()
     stable_programs = scored_programs["median_score"].notna().sum()
     friendly_feature_labels = [FEATURE_LABELS.get(column, column) for column in metadata["feature_columns"]]
 
-    st.sidebar.title("About this dashboard")
+    st.sidebar.title("About this app")
     st.sidebar.write(
-        "This dashboard predicts Florida program earnings and shows which programs are above or below expected earnings across 1, 4, and 5 years."
+        "Use the page list above to switch between the dashboard, an individual prediction form, and batch scoring."
     )
     st.sidebar.metric("4-year model fit (R^2, log scale)", f"{metrics['r2_log']:.3f}")
     st.sidebar.metric("Typical 4-year error", format_currency(metrics["mae"]))
@@ -813,24 +936,12 @@ def render_sidebar(metadata: dict[str, object], scored_programs: pd.DataFrame) -
     with st.sidebar.expander("What the model uses", expanded=False):
         st.write(", ".join(friendly_feature_labels))
     with st.sidebar.expander("Model results by year", expanded=False):
-        st.dataframe(metadata["evaluation_table"], use_container_width=True, hide_index=True)
+        st.dataframe(metadata["evaluation_table"], width="stretch", hide_index=True)
 
 
 def render_dashboard() -> None:
-    st.set_page_config(
-        page_title="Florida Program Earnings Dashboard",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
-
-    inject_styles()
-    predictor = get_predictor()
-    metadata = predictor.metadata()
-    metadata["evaluation_table"] = predictor.evaluation_table().rename(
-        columns={"R2 (log scale)": "R^2 (log scale)"}
-    )
-    programs = load_scored_programs(str(DATA_PATH), predictor)
-    actual_programs = programs.dropna(subset=["gap"]).copy()
+    configure_page("Florida Program Earnings Dashboard")
+    _, metadata, programs, actual_programs = load_app_state()
 
     total_programs = len(programs)
     total_schools = programs["school_name"].nunique()
@@ -843,23 +954,10 @@ def render_dashboard() -> None:
 
     render_sidebar(metadata, programs)
 
-    st.markdown(
-        """
-        <div class="hero">
-            <h1>Florida Program Earnings Dashboard</h1>
-            <p>
-                Compare Florida programs' reported earnings with what the model expected. Search by school
-                or program, review the 1-, 4-, and 5-year results, and upload a CSV to score new rows.
-            </p>
-            <div class="chip-row">
-                <span class="chip">XGBoost model</span>
-                <span class="chip">1-, 4-, and 5-year view</span>
-                <span class="chip">Program search</span>
-                <span class="chip">Batch upload</span>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
+    render_hero(
+        "Florida Program Earnings Dashboard",
+        "Compare Florida programs' reported earnings with what the model expected, then use the sidebar pages for individual or batch predictions.",
+        ["XGBoost model", "Statewide comparison", "Individual predictions", "Batch predictions"],
     )
 
     render_metric_cards(
@@ -910,7 +1008,7 @@ def render_dashboard() -> None:
             "<div class='section-note'>Each dot is one program at one school. Dots above the dashed line had higher actual 4-year earnings than the model expected.</div>",
             unsafe_allow_html=True,
         )
-        st.altair_chart(build_scatter_chart(actual_programs, PRIMARY_PREDICTION_COLUMN), use_container_width=True)
+        st.altair_chart(build_scatter_chart(actual_programs, PRIMARY_PREDICTION_COLUMN), width="stretch")
 
     st.subheader("Programs with the largest gaps")
     st.markdown(
@@ -931,7 +1029,7 @@ def render_dashboard() -> None:
     st.markdown("**Programs most above expected**")
     st.dataframe(
         build_highlight_table(actual_programs, ascending=False),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config=highlight_column_config,
         height=216,
@@ -940,244 +1038,14 @@ def render_dashboard() -> None:
     st.markdown("**Programs most below expected**")
     st.dataframe(
         build_highlight_table(actual_programs, ascending=True),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config=highlight_column_config,
         height=216,
     )
 
     st.caption("This chart shows the biggest positive and negative gaps in one place.")
-    st.altair_chart(build_extreme_gap_chart(actual_programs), use_container_width=True)
-
-    explore_tab, batch_tab = st.tabs(["Explore programs", "Batch upload"])
-
-    with explore_tab:
-        st.subheader("Find a program")
-        st.markdown(
-            "<div class='section-note'>Search by CIP code, school name, or program title. For the presentation, the simplest flow is: search, pick a match, and explain the gap.</div>",
-            unsafe_allow_html=True,
-        )
-
-        demo_examples = build_demo_examples(actual_programs)
-        demo_choice = st.selectbox(
-            "Quick demo pick",
-            options=["Type my own search"] + list(demo_examples.keys()),
-            index=1 if demo_examples else 0,
-        )
-
-        search = st.text_input(
-            "Search programs",
-            value="",
-            placeholder="Example: 1205, Atlantic Technical, nursing, culinary",
-            disabled=demo_choice != "Type my own search",
-        )
-
-        if demo_choice == "Type my own search":
-            filtered_programs = filter_programs(programs, search)
-        else:
-            filtered_programs = programs.loc[[demo_examples[demo_choice]]].copy()
-            st.caption("Showing a preselected example to keep the demo quick and reliable.")
-
-        st.write(f"Matches found: {len(filtered_programs):,}")
-
-        if filtered_programs.empty:
-            st.warning("No matches found. Try a CIP code, school name, or a few words from the program title.")
-        else:
-            preview_table = build_results_table(filtered_programs)
-            preview_count = len(preview_table)
-            total_matches = len(filtered_programs)
-            if demo_choice == "Type my own search" and search.strip():
-                st.caption("Best matches appear first.")
-            if total_matches > preview_count:
-                st.caption(f"Showing the first {preview_count} matches.")
-            st.dataframe(preview_table, use_container_width=True)
-
-            option_ids = filtered_programs.index.tolist()
-            selected_index = 0
-            search_code = "".join(ch for ch in search if ch.isdigit())
-            if search_code:
-                exact_match = filtered_programs[filtered_programs["code"] == search_code.zfill(4)]
-                if len(exact_match) == 1:
-                    selected_index = option_ids.index(int(exact_match.index[0]))
-
-            selected_id = st.selectbox(
-                "Choose a program",
-                options=option_ids,
-                index=selected_index,
-                format_func=lambda row_id: build_program_option_label(filtered_programs.loc[row_id]),
-            )
-            selected_row = filtered_programs.loc[selected_id]
-
-            selected_prediction = selected_row[PRIMARY_PREDICTION_COLUMN]
-            selected_actual = selected_row[PRIMARY_ACTUAL_COLUMN]
-            selected_gap = selected_row["gap"]
-            selected_year_table = build_year_summary_table(selected_row, predictor)
-            confidence_text = str(selected_row.get("confidence", "Not available"))
-            median_score_text = (
-                f"{float(selected_row['median_score']):.3f}"
-                if pd.notna(selected_row.get("median_score"))
-                else "Not available"
-            )
-            rank_volatility_text = (
-                f"{float(selected_row['mean_rank_std_pct']):.3f}"
-                if pd.notna(selected_row.get("mean_rank_std_pct"))
-                else "Not available"
-            )
-
-            detail_col, metric_col = st.columns([1.2, 1])
-            with detail_col:
-                st.markdown(
-                    f"""
-                    <div class="panel">
-                        <h3>{selected_row['title']}</h3>
-                        <p>
-                            <strong>School:</strong> {selected_row['school_name']}<br>
-                            <strong>CIP code:</strong> {selected_row['code']}<br>
-                            <strong>Award type:</strong> {format_credential_level(selected_row.get('credential_level'))}<br>
-                            <strong>Selectivity group:</strong> {format_feature_value('selectivity_bucket', selected_row.get('selectivity_bucket'))}<br>
-                            <strong>Admission rate:</strong> {format_feature_value('admission_rate_overall', selected_row.get('admission_rate_overall'))}<br>
-                            <strong>Median family income:</strong> {format_feature_value('median_family_income', selected_row.get('median_family_income'))}<br>
-                            <strong>How strong this pattern looks:</strong> {confidence_text}<br>
-                            <strong>Overall multi-year score:</strong> {median_score_text}<br>
-                            <strong>How much the ranking changes across years:</strong> {rank_volatility_text}
-                        </p>
-                        {status_badge(selected_row['performance'], selected_gap)}
-                        <div style="margin-top:0.45rem;">{stability_badge(selected_row['stability_status'])}</div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-            with metric_col:
-                metric_a, metric_b, metric_c = st.columns(3)
-                metric_a.metric("Predicted 4-year earnings", format_currency(selected_prediction))
-                metric_b.metric("Actual 4-year earnings", format_currency(selected_actual))
-                metric_c.metric("4-year gap", format_signed_currency(selected_gap))
-
-                if pd.notna(selected_gap):
-                    if selected_gap >= 0:
-                        st.success(
-                            f"Actual 4-year earnings were {format_signed_currency(selected_gap)} above the model's prediction."
-                        )
-                    else:
-                        st.error(
-                            f"Actual 4-year earnings were {format_signed_currency(selected_gap)} below the model's prediction."
-                        )
-                else:
-                    st.info("There is no saved 4-year comparison for this program, so only the new prediction is shown.")
-
-            if pd.notna(selected_actual):
-                st.altair_chart(
-                    build_program_comparison_chart(float(selected_prediction), float(selected_actual)),
-                    use_container_width=True,
-                )
-
-            st.markdown("**1-, 4-, and 5-year earnings**")
-            st.caption(
-                "These values represent median earnings of graduates who are working and not enrolled, "
-                "measured 1, 4, and 5 years after completion. Each year is a separate snapshot, "
-                "so the numbers do not always increase step by step."
-            )
-            st.dataframe(selected_year_table, use_container_width=True, hide_index=True)
-            st.caption(
-                "A higher number later on is common, but it is not guaranteed. The 1-, 4-, and 5-year values come from separate reported follow-up periods."
-            )
-
-            with st.expander("What the model used for this prediction", expanded=False):
-                st.dataframe(
-                    build_feature_table(selected_row, predictor.feature_columns),
-                    use_container_width=True,
-                )
-
-    with batch_tab:
-        st.subheader("Upload a file to score programs")
-        st.markdown(
-            "<div class='section-note'>Use this during the presentation: download the template, upload a CSV, and then download the results.</div>",
-            unsafe_allow_html=True,
-        )
-
-        batch_left, batch_right = st.columns([1, 1.2])
-        template_df = programs[predictor.feature_columns].head(10).copy()
-
-        with batch_left:
-            st.markdown(
-                """
-                <div class="panel">
-                    <h3>Step 1: Download the template</h3>
-                    <p>This sample file already has the columns the model needs, in the right order.</p>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            st.download_button(
-                "Download template CSV",
-                data=template_df.to_csv(index=False).encode("utf-8"),
-                file_name="sample_program_input.csv",
-                mime="text/csv",
-            )
-
-            with st.expander("Columns the model needs", expanded=False):
-                st.dataframe(
-                    pd.DataFrame({"Required column": predictor.feature_columns}),
-                    use_container_width=True,
-                )
-
-        with batch_right:
-            st.markdown(
-                """
-                <div class="panel">
-                    <h3>Step 2: Upload your file</h3>
-                    <p>Upload a CSV with those columns. The app will preview the predictions and let you download the full scored file.</p>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            uploaded_file = st.file_uploader("Upload a CSV", type=["csv"])
-
-            if uploaded_file is not None:
-                batch = pd.read_csv(uploaded_file)
-                missing_columns = [column for column in predictor.feature_columns if column not in batch.columns]
-
-                if missing_columns:
-                    st.error(f"Your file is missing these columns: {', '.join(missing_columns)}")
-                else:
-                    scored_batch = predictor.predict_frame(batch)
-                    preview_columns = [
-                        column
-                        for column in [
-                            "code",
-                            "title",
-                            "school_name",
-                            "credential_level",
-                            predictor.prediction_columns_by_year[1],
-                            predictor.prediction_columns_by_year[4],
-                            predictor.prediction_columns_by_year[5],
-                        ]
-                        if column in scored_batch.columns
-                    ]
-                    preview_frame = scored_batch[preview_columns].head(10).rename(
-                        columns={
-                            "code": "CIP",
-                            "title": "Program",
-                            "school_name": "School",
-                            "credential_level": "Credential level",
-                            predictor.prediction_columns_by_year[1]: "Predicted 1-year earnings",
-                            predictor.prediction_columns_by_year[4]: "Predicted 4-year earnings",
-                            predictor.prediction_columns_by_year[5]: "Predicted 5-year earnings",
-                        }
-                    )
-
-                    preview_a, preview_b = st.columns(2)
-                    preview_a.metric("Rows scored", f"{len(scored_batch):,}")
-                    preview_b.metric("Predictions returned", "1-, 4-, and 5-year earnings")
-
-                    st.dataframe(preview_frame, use_container_width=True)
-                    st.download_button(
-                        "Download scored CSV",
-                        data=scored_batch.to_csv(index=False).encode("utf-8"),
-                        file_name="predictions.csv",
-                        mime="text/csv",
-                    )
+    st.altair_chart(build_extreme_gap_chart(actual_programs), width="stretch")
 
 
 if __name__ == "__main__":

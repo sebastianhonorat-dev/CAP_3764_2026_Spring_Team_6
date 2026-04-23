@@ -218,4 +218,4 @@ The notebooks should be read in this order:
 4. `04_modeling/04_xgboost_multi_year_modeling.ipynb`
 5. `05_deployment/05_deployment_walkthrough.ipynb`
 
-See [notebooks/README.md](notebooks/README.md) for the short notebook guide.
+

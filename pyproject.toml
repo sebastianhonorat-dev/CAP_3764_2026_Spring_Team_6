@@ -20,6 +20,7 @@ dependencies = [
     "streamlit",
     "uvicorn",
     "xgboost",
+    "seaborn"
 ]
 
 [project.optional-dependencies]
